@@ -11,34 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150330153030) do
-
-  create_table "devices", force: :cascade do |t|
-    t.string   "generic_name"
-    t.string   "brand"
-    t.integer  "manufacturer_id"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-  end
+ActiveRecord::Schema.define(version: 20150330152939) do
 
   create_table "events", force: :cascade do |t|
+    t.string   "report_number"
     t.string   "event_type"
-    t.string   "reporter"
-    t.string   "content"
-    t.string   "product_code"
-    t.datetime "event_date"
-    t.datetime "receive_date"
-    t.integer  "device_id"
-    t.integer  "manufacturer_id"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-  end
-
-  create_table "manufacturers", force: :cascade do |t|
-    t.string   "name"
-    t.string   "location"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "reporter_occupation"
+    t.string   "manufacturer_state"
+    t.date     "date_of_event"
+    t.text     "mdr_text"
+    t.string   "manufacturer_name"
+    t.string   "report_source_code"
+    t.integer  "number_devices_in_event"
+    t.string   "device_operator"
+    t.string   "brand_name"
+    t.string   "generic_name"
+    t.string   "catalog_number"
+    t.string   "device_report_product_code"
+    t.boolean  "baseline_510_k__exempt_flag"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
 end
