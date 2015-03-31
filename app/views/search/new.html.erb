@@ -1,27 +1,19 @@
-
-
-
-<!-- 
-<form novalidate="novalidate" class="simple_form new_search" id="new_search" action="/searches" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="JIXVXmPUtacMBbE9Tzziybv9ZIZJTbMXfDwpfw9ZcM+NyKgtkFC217iWURiAKpNfIthC7V7lnDCwWuvZEWBRew==" />
-  <div class="form-group string required search_search_term"><input class="string required form-control" placeholder="Enter generic medical device name here..." type="text" name="search[search_term]" id="search_search_term" /></div>
-</form>
- -->
 <%= simple_form_for @search do |f| %>
 
-<div class="row">
-  <div class="col-lg-6">
-    <div class="input-group">
-      <div class="input-group-btn">
-        <!-- <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Action <span class="caret"></span></button> -->
-        <select name="search_type" class="btn btn-default dropdown-toggle">
-        	<option value="0">Search By...</option>
-        	<option value="1">Device</option>
-        	<option value="2">Manufacturer</option>
-        	<option value="3">Adverse Event Report Description</option>
-        </select>
-      </div><!-- /btn-group -->
-  	<%= f.input :search_term, label: false,  placeholder: 'Enter generic medical device name here...' %> 
-    </div><!-- /input-group -->
-  </div><!-- /.col-lg-6 -->
-</div>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="input-group">
+        <div class="input-group-btn">
+          <select name="search_type" class="form-control" id="dropdown">
+          	<option value="0">Search By...</option>
+          	<option value="1">Device Name</option>
+          	<option value="2">Manufacturer</option>
+          	<option value="3">Event Description</option>
+          </select>
+        </div>
+    	 <%= f.input :search_term, label: false,  placeholder: 'Enter search here...' %> 
+      </div>
+    </div>
+  </div>
+
 <% end %>
