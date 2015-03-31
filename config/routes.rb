@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
 
   post '/searches' => 'search#create'
+  get  '/results'  => 'search#show'
   root 'search#new'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

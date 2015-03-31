@@ -6,7 +6,7 @@ class Api < ActiveRecord::Base
 
     skip = Event.count
 
-    10.times do
+    500.times do
       key = ENV["openFDA_key"]
       base_url = "https://api.fda.gov/device/event.json?api_key=#{key}&limit=100&skip="
       full_url = base_url + skip.to_s
