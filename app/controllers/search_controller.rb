@@ -6,12 +6,24 @@ class SearchController < ApplicationController
 
 	def create
     @search_term = params["search"]["search_term"].upcase
-    @recent_events = Event.where("generic_name like '%#{@search_term}%' AND date_of_event IS NOT NULL").order("date_of_event DESC").limit(5)
-    binding.pry
+    @search_type = search_type
+    @recent_events = Event.where("#{@search_type} like '%#{@search_term}%' AND date_of_event IS NOT NULL").order("date_of_event DESC").limit(5)
     render :show
 	end
 
   def show
+  end
+
+  def search_type
+  	category = params["search_type"]
+  	case category
+  	when "0", "1"
+  		"generic_name" 
+  	when "2"
+  		"manufacturer_name"
+  	when "3"
+  		"mdr_text"
+  	end
   end
 
 end

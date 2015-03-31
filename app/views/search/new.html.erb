@@ -13,11 +13,11 @@
     <div class="input-group">
       <div class="input-group-btn">
         <!-- <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Action <span class="caret"></span></button> -->
-        <select name="category_id" class="btn btn-default dropdown-toggle">
-        	<option value="0">New</option>
-        	<option value="1">SubCategory1</option>
-        	<option value="2">SubCategory2</option>
-        	<option value="3">SubCategory3</option>
+        <select name="search_type" class="btn btn-default dropdown-toggle">
+        	<option value="0">Search By...</option>
+        	<option value="1">Device</option>
+        	<option value="2">Manufacturer</option>
+        	<option value="3">Adverse Event Report Description</option>
         </select>
       </div><!-- /btn-group -->
   	<%= f.input :search_term, label: false,  placeholder: 'Enter generic medical device name here...' %> 
