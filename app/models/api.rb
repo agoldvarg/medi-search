@@ -4,9 +4,9 @@ class Api < ActiveRecord::Base
 
   def self.call
 
-    skip = 118073
+    skip = Event.count
 
-    1000.times do
+    300.times do
       base_url = "https://api.fda.gov/device/event.json?api_key=S9BDUNvbSr75OCkTG4ZB8sYzMBPSVjZrIDK0qRdo&limit=100&skip="
       full_url = base_url + skip.to_s
       json = JSON.load(open(full_url))
