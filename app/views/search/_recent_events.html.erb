@@ -1,10 +1,9 @@
-
 <div id="result-header">
-  <h1>Listing of adverse event reports containing: <span id="header-term"><%= @search_term %></span></h1>
+  <h1>Listing of adverse event reports containing: <span id="header-term"><%= search_term %></span></h1>
 </div>
 
 <div class="">
-<% @recent_events.each do |event| %>
+<% recent_events.each do |event| %>
   <div class="panel panel-default">
     <div class="panel-body">
       <h4 id="report-number" >Report # <%= event.report_number %></h4>
@@ -21,10 +20,3 @@
   </div>
 <% end %>
 </div>
-<!-- <div class="col-md-5">
-  <div class="panel panel-default">
-    <div class="panel-body">
-      <div id="chart_div"></div>
-    </div>
-  </div>
-</div> -->

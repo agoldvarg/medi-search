@@ -1,0 +1,2 @@
+$('body').html("<%= j render partial: 'recent_events', locals: {search_term: @search_term, recent_events: @recent_events} %>");
+$('h1').append("<%= j render partial: 'form', locals: {search: Search.new} %>")
