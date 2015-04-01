@@ -1,19 +1,23 @@
-<%= simple_form_for @search do |f| %>
 
-  <div class="row">
-    <div class="col-lg-6">
+
+<form novalidate="novalidate" class="simple_form new_search" id="new_search" action="/searches" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="">
+
+  <div class="">
+    <div class="col-lg-9">
+    <div class="col-lg-3"></div>
       <div class="input-group">
         <div class="input-group-btn">
           <select name="search_type" class="form-control" id="dropdown">
-          	<option value="0">Search By...</option>
-          	<option value="1">Device Name</option>
-          	<option value="2">Manufacturer</option>
-          	<option value="3">Event Description</option>
+            <option value="0">Search By...</option>
+            <option value="1">Device Name</option>
+            <option value="2">Manufacturer</option>
+            <option value="3">Description</option>
           </select>
         </div>
-    	 <%= f.input :search_term, label: false,  placeholder: 'Enter search here...' %> 
+       <input class="string required form-control" placeholder="Enter search here..." type="text" name="search[search_term]" id="search_search_term">
       </div>
     </div>
   </div>
 
-<% end %>
+</form>
+

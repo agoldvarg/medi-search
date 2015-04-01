@@ -1,9 +1,13 @@
-<h2>Listing of recent reported events containing: <span id="report_number"><%= @search_term %></span></h2>
 
+<div id="result-header">
+  <h1>Listing of recently reported events containing: <span id="header-term"><%= @search_term %></span></h1>
+</div>
+
+<div id="buffer"></div>
 <% @recent_events.each do |event| %>
   <div class="panel panel-default">
     <div class="panel-body">
-      <h4 id="report_number" ><%= event.report_number %></h4>
+      <h4 id="report-number" ><%= event.report_number %></h4>
       <ul>
       <li>Device - Generic Name <%= event.generic_name %> </li>
       <li>Device Brand Name - Full Name: <%= event.brand_name %></li>
@@ -16,3 +20,4 @@
     </div>
   </div>
 <% end %>
+
