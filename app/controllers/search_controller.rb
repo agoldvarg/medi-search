@@ -8,7 +8,7 @@ class SearchController < ApplicationController
     @search_term = params["search"]["search_term"].upcase
     @search_type = search_type
     @recent_events = Event.where("#{@search_type} like '%#{@search_term}%' AND date_of_event IS NOT NULL").order("date_of_event DESC").limit(50)
-    render :show
+   render :show, :layout => false 
 	end
 
   def show
