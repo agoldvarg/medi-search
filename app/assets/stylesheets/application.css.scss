@@ -26,9 +26,13 @@ body {
 }
 
 div {
-  margin-top: 30px;
+  margin-top: 20px;
   margin-left: 25px;
   margin-right: 25px;
+}
+
+#party {
+  margin-top: 1em;
 }
 
 #header-term {
@@ -36,14 +40,6 @@ div {
   outline: 2px solid;
   outline-color: red;
   padding: 8px;
-}
-
-#result-header {
-  margin-top: 30px;
-}
-
-#buffer {
-  margin: 0px;
 }
 
 .panel-body {
@@ -63,13 +59,13 @@ div {
   margin-right: 10px;
 }
 
+#top-dog {
+  font-weight: bold;
+}
+
 .form-control {
   height: 40px;
   font-size: 18px;
-}
-
-.col-md-6 {
-  margin-top: 10px;
 }
 
 html {
