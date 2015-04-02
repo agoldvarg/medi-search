@@ -1,2 +1,4 @@
+// $('body').hide(1000);
 $('body').html("<%= j render partial: 'recent_events', locals: {search_term: @search_term, recent_events: @recent_events} %>");
-$('h1').after("<%= j render partial: 'form', locals: {search: Search.new} %>")
+$('h1').after("<%= j render partial: 'form', locals: {search: Search.new} %>");
+// $('body').fade(1000);
