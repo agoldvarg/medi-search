@@ -11,18 +11,5 @@ function sendQuery (e){
 		url: url,
 		data: $("form").serialize(),
 		datatype: 'script'
-		// success: function(response){
-		// 	$('form').hide();
-		// 	showResponse(response);
-		// }
 	});
 }
-
-// function showResponse(response){
-// 		$("body").html(response).hide();
-// 		showBody();
-// }
-
-// function showBody() {
-// 	$('body').fadeIn('slow');
-// }

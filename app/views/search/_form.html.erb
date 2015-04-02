@@ -1,9 +1,7 @@
-
-
-<%= form_tag '/searches', method: "POST", :class => 'simple_form new_search', :role => 'search', remote: true do %>
+<%= form_tag '/searches', method: "POST", remote: true do %>
   <div class="form-group">
     <%= select_tag "search_type", "<option>Search By...</option><option>Device Name</option><option>Manufacturer</option><option>Description</option>".html_safe, :class => 'form-control' %>
-    <%= text_field_tag("search[search_term]", nil, placeholder: 'search', :class => 'form-control') %>
-  <%= submit_tag "Search", class: 'btn btn-default btn-sm', style: "display: block; width: 100%;" %>
+    <%= text_field_tag("search[search_term]", nil, placeholder: 'search', :class => 'form-control', autofocus: true) %>
+    <%= submit_tag "Search", class: 'btn btn-default btn-sm', style: "display: block; width: 100%;" %>
   </div>
 <% end %>
