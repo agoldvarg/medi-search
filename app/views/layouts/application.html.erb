@@ -8,8 +8,15 @@
   <%= analytics_init if Rails.env.production? %>
 </head>
 <body>
-
   <%= yield %>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div>
+    <p id="footer-text" >Created by <a href="http://people.flatironschool.com/profiles/skylar-panuska" title="">Skylar Panuska</a>, <a href="http://people.flatironschool.com/profiles/alex-goldvarg" title="">Alex Goldvarg</a>, and <a href="https://github.com/laranicole70" title="">Lara Nicole</a>.</p>
+    <a href="https://github.com/agoldvarg/medi-search" title=""><p>View Source on Github</p></a>
+  </div>
+</nav>
+
 
 </body>
 </html>

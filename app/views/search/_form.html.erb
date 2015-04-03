@@ -9,13 +9,13 @@
   <div class="input-group">
 
     <div class="input-group-btn">
-      <%= select_tag "search_type", "<option>Search By...</option><option>Device Name</option><option>Manufacturer</option><option>Description</option>".html_safe, class: 'form-control', id: 'dropdown' %>  
+      <%= select_tag "search_type", "<option>Filter By...</option><option>Device Name</option><option>Manufacturer</option><option>Description</option>".html_safe, class: 'form-control', id: 'dropdown' %>  
     </div>
 
-    <%= text_field_tag("search[search_term]", nil, placeholder: 'Search for a device!', class: 'form-control', autofocus: true) %>
+    <%= text_field_tag("search[search_term]", nil, placeholder: 'Search here...', class: 'form-control', autofocus: true) %>
 
       <div class="input-group-btn">
-        <%= submit_tag "Show Reports", class: 'form-control' %>
+        <%= submit_tag "Show Reports", class: 'form-control', id: 'submit-button' %>
       </div>
 
     </div>

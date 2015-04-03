@@ -20,7 +20,7 @@ class SearchController < ApplicationController
   def search_type
   	category = params["search_type"]
   	case category
-  	when "Search By...", "Device Name"
+  	when "Filter By...", "Device Name"
   		"generic_name" 
   	when "Manufacturer"
   		"manufacturer_name"
